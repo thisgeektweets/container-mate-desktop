@@ -35,3 +35,5 @@ echo "mate-session" > /home/desktop/.xsession
 RUN adduser desktop sudo
 
 RUN apt remove blueman -y
+
+RUN apt install neofetch -y
