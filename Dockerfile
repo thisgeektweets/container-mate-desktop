@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -27,7 +27,7 @@ RUN apt-get update -y && \
     apt-get install -y ubuntu-mate-desktop \
     htop \
     gconf-service libnspr4 libnss3 fonts-liberation \
-    libappindicator1 libcurl3 fonts-wqy-microhei firefox && \
+    libappindicator1 libcurl4 fonts-wqy-microhei firefox && \
     apt-get autoclean && apt-get autoremove && \
     rm -rf /var/lib/apt/lists/* && \
 echo "mate-session" > /home/desktop/.xsession
